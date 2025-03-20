@@ -1,0 +1,28 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.125rem;
+  padding: 50px;
+}
+
+/*
+- použij emotikon melounu 🍉 místo odrážky v seznamu
+- neřeš odsazení textu a zarovnání textu/ikonek,
+  jen si vyzkoušej, jak přidat ikonku před každou položku seznamu
+*/
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+.list li {
+  margin-top: 10px;
+}
+
+.list li::before {
+  content: "🍉";
+  margin-right: 5px;
+}

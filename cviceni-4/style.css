@@ -1,0 +1,29 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  padding: 50px;
+}
+
+
+/*
+Nastyluj odkazy, které se otevírají do nového okna tak, aby za odkazem byla malá ikonka.
+
+Odkazy do nového okna poznáš tak, že mají u sebe atribut target="_blank".
+*/
+
+a[target=_blank]::after {
+  content: "";
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-left: 4px;
+  vertical-align: top;
+  background-image: url(images/icon.svg);
+  background-size: 100%;
+  opacity: 0.7;
+}

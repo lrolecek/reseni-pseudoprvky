@@ -1,0 +1,54 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.125rem;
+  padding: 50px;
+}
+
+:root {
+  --czechitas-blue: #2d2e83aa;
+  --czechitas-pink: #e6007eaa;
+}
+
+h1 {
+  text-align: center;
+}
+
+.foto img {
+  width: 100%;
+  border-radius: 50%;
+  border: 8px solid #e5e5e5
+}
+
+.foto {
+  margin: 50px auto;
+  max-width: 300px;
+  position: relative;
+}
+
+.foto::before,
+.foto::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.foto::before {
+  width: 50px;
+  height: 50px;
+  bottom: 30px;
+  left: 15px;
+  background: var(--czechitas-pink);
+}
+
+.foto::after {
+  width: 100px;
+  height: 100px;
+  top: 0px;
+  right: 0px;
+  background: var(--czechitas-blue);
+}
